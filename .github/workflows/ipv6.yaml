@@ -1,0 +1,22 @@
+name: ipv6 test
+
+on:
+  push:
+    branches:
+      - "*"
+    # branches-ignore:
+    #  - 'main'
+    tags:
+      - v*
+#  pull_request:
+
+jobs:
+  build:
+    name: Test ipv6
+    runs-on: self-hosted
+    if: github.event_name == 'push' || github.event.pull_request.merged == true
+    steps:
+      - name: Test ipv6
+        run: curl -6 https://www.google.com
+
+
