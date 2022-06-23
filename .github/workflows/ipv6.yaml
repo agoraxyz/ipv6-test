@@ -17,6 +17,6 @@ jobs:
     if: github.event_name == 'push' || github.event.pull_request.merged == true
     steps:
       - name: Test ipv6
-        run: curl -6 https://www.google.com
+        run: curl -6 https://ipv6.google.com
 
 
